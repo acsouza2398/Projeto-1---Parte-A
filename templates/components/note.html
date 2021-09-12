@@ -1,4 +1,4 @@
-<div class="card">
+<li class="card" key="{id}">
     <h3 class="card-title" method="put">{title}</h3>
     <div class="card-content">
         <p class="card-content" method="put">{content}</p>
@@ -8,19 +8,21 @@
       <button type="submit"class="btn">Deletar</button>
     </form>
     <form class="card_edit" method = "post" action = "\edit">
+        <script type="text/javascript" src="/templates/getit.js"></script>
+        <input type="hidden" name="id" value="{id}" />
         <div class="update" id = "update">
-          <input type="hidden" name="id" value="{id}" />
-          <input
+            <input
               value="{title}"
               name="title"
+              key="{id}"
             />
             <input
               name="content"
               value="{content}"
+              key="{id}"
             />
-            <button onclick="change_update()" type="submit" class="button">Confirmar</button>
+            <button onclick = "change_update()" type="submit" class="button">Confirmar</button>
         </div>
+        <button onclick = "change_update()" type="submit" class="btn">Editar</button>
     </form>
-    <button onclick="change_update()" type="submit" class="btn" id="restore">Editar</button>
-    <script type="text/javascript" src="/templates/getit.js"></script>
-</div>
+</li>
