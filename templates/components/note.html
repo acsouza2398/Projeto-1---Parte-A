@@ -5,7 +5,7 @@
     </div>
     <form method = "post" action = "\delete">
       <input type="hidden" name="id" value="{id}" />
-      <button type="submit"class="button">Deletar</button>
+      <button type="submit"class="btn">Deletar</button>
     </form>
     <form class="card_edit" method = "post" action = "\edit">
         <div class="update" id = "update">
@@ -13,15 +13,14 @@
           <input
               value="{title}"
               name="title"
-              class="card-title"
             />
-            <textarea
+            <input
               name="content"
-              class="card-content"
-            > {content} </textarea>
+              value="{content}"
+            />
             <button onclick="change_update()" type="submit" class="button">Confirmar</button>
         </div>
     </form>
-    <button onclick="change_update()" type="submit"><i class="button">Editar</button>
+    <button onclick="change_update()" type="submit" class="btn" id="restore">Editar</button>
     <script type="text/javascript" src="/templates/getit.js"></script>
 </div>

@@ -145,7 +145,7 @@ body {
 .card {
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
-  margin: 0.5rem; 
+  margin: 2rem; 
   height: 8rem;
   width: 13rem;
   font-family: 'Permanent Marker', cursive;
@@ -171,9 +171,9 @@ body {
 }
 
 .btn_change{
-  display: inline-flex;
+  display: flex;
   border:none;
-  width:100%;
+  width:70%;
   box-shadow: 0 2px 7px rgba(0,0,0,0.12), 0 2px 7px rgba(0,0,0,0.24);
   border-radius: 0.2rem;
   padding: 0.5rem;
@@ -189,6 +189,11 @@ body {
 
 .update{
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.2rem;
+  font-size: 0.9rem;
 }
 
 .card-title {

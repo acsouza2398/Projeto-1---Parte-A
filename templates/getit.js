@@ -35,9 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function change_update() {
   var change = document.getElementById('update');
+  var bringback = document.getElementById('restore');
 
   // get the current value of the clock's display property
   var displaySetting = change.style.display;
+  var displaySetting_BB = bringback.style.display;
 
   // now toggle the clock and the button text, depending on current state
   if (displaySetting != 'none') {
@@ -47,6 +49,18 @@ function change_update() {
   else {
     // clock is hidden. show it
     change.style.display = 'flex';
+    change.style.flexDirection = 'column';
+    change.style.alignItems = "center";
     // change button text
   }
+
+  //if (displaySetting_BB != 'none') {
+  //  // clock is visible. hide it
+  //  bringback.style.display = 'none';
+  //}
+  //else {
+  //  // clock is hidden. show it
+  //  bringback.style.display = 'flex';
+  //  // change button text
+  //}
 }
