@@ -32,21 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Referencia: https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
 
-
 function change_update() {
   var change = document.getElementById('update_js');
-
+  var bttn = document.getElementById('btn_edit');
   // get the current value of the clock's display property
   var displaySetting = change.style.display;
 
+
   // now toggle the clock and the button text, depending on current state
-  if (displaySetting != 'none') {
+  if (displaySetting == 'flex') {
     // clock is visible. hide it
     change.style.display = 'none';
+    bttn.innerHTML = "Editar"
   }
   else {
     // clock is hidden. show it
     change.style.display = 'flex';
     // change button text
+    bttn.innerHTML = "Cancelar"
   }
-}
+};
+
+document.getElementById("btn_change").addEventListener("click", change_update);
