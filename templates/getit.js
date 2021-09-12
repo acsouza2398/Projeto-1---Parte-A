@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function change_update() {
-  var change = document.getElementById('update');
+  var change = document.getElementById('update_js');
 
   // get the current value of the clock's display property
   var displaySetting = change.style.display;

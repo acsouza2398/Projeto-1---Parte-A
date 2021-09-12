@@ -133,15 +133,6 @@ body {
   padding: .5rem;
 }
 
-.btn{
-  border:none;
-  background: #f7d736;
-  width:100%;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.12), 0 2px 7px rgba(0,0,0,0.24);
-  border-radius: 0.2rem;
-  padding: 0.5rem;
-}
-
 .card {
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
@@ -170,13 +161,14 @@ body {
   border-radius: 0.5rem;
 }
 
-.btn_change{
-  display: flex;
+.btn{
   border:none;
-  width:70%;
+  background: #f7d736;
+  width:100%;
   box-shadow: 0 2px 7px rgba(0,0,0,0.12), 0 2px 7px rgba(0,0,0,0.24);
   border-radius: 0.2rem;
   padding: 0.5rem;
+  margin: 0.2rem;
 }
 
 .card-container{
@@ -187,7 +179,7 @@ body {
   justify-content: space-around;
 }
 
-.update{
+.update_cl{
   display: flex;
   flex-direction: column;
   align-items: center;
