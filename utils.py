@@ -59,7 +59,9 @@ def delete_note(id):
 
 def update_note(id, correct):
     db = Database('bank')
-    update = db.update(Note(id = id, title = correct['title'], content = correct['content']))
+    if correct:
+        update = db.update(Note(id = id, title = correct["title"], content = correct["content"]))
+        print("see here", correct)
 
     
 

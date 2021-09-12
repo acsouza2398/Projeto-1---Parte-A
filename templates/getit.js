@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sorteia classes de cores aleatoriamente para os cards
   let cards = document.getElementsByClassName("card");
+
   for (let i = 0; i < cards.length; i++) {
     let card = cards[i];
     card.className += ` card-color-${getRandomInt(
@@ -28,3 +29,24 @@ document.addEventListener("DOMContentLoaded", function () {
     )} card-rotation-${getRandomInt(1, 11)}`;
   }
 });
+
+//Referencia: https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+
+
+function change_update() {
+  var change = document.getElementById('update');
+
+  // get the current value of the clock's display property
+  var displaySetting = change.style.display;
+
+  // now toggle the clock and the button text, depending on current state
+  if (displaySetting != 'none') {
+    // clock is visible. hide it
+    change.style.display = 'none';
+  }
+  else {
+    // clock is hidden. show it
+    change.style.display = 'flex';
+    // change button text
+  }
+}

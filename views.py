@@ -72,11 +72,12 @@ def edit(request):
         id = urllib.parse.unquote_plus(corpo[corpo.find("=")+1:], encoding="utf-8", errors="replace")
         id_int = int(id.split('&')[0])
         for chave_valor in corpo.split('&'):
+            print("chave_valor", chave_valor)
             if chave_valor.startswith("title"):
                 params["title"] = urllib.parse.unquote_plus(chave_valor[chave_valor.find("=")+1:], encoding="utf-8", errors="replace")
             if chave_valor.startswith("content"):
                 params["content"] = urllib.parse.unquote_plus(chave_valor[chave_valor.find("=")+1:], encoding="utf-8", errors="replace")
-    
+
         update_note(id_int, params)
 
         return build_response(code=303, reason='See Other', headers='Location: /')

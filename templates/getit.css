@@ -142,15 +142,6 @@ body {
   padding: 0.5rem;
 }
 
-.btn_change{
-  border:none;
-  width:100%;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.12), 0 2px 7px rgba(0,0,0,0.24);
-  border-radius: 0.2rem;
-  padding: 0.5rem;
-}
-
-
 .card {
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
@@ -165,6 +156,29 @@ body {
   border-radius: 0.5rem;
 }
 
+.card_edit{
+  display: flex;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
+  margin: 0.5rem; 
+  height: 8rem;
+  width: 13rem;
+  font-family: 'Permanent Marker', cursive;
+  flex-direction: column;
+  justify-content: top;
+  text-align: left;
+  border-radius: 0.5rem;
+}
+
+.btn_change{
+  display: inline-flex;
+  border:none;
+  width:100%;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.12), 0 2px 7px rgba(0,0,0,0.24);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
 .card-container{
   flex-wrap: wrap;
   flex-direction: row;
@@ -173,6 +187,9 @@ body {
   justify-content: space-around;
 }
 
+.update{
+  display: none;
+}
 
 .card-title {
   color: #2c2c2c;
