@@ -1,5 +1,5 @@
 from os import error, replace
-from utils import load_data, load_template, add_notes, build_response, delete, update
+from utils import load_data, load_template, add_notes, build_response, delete_note, update_note
 import urllib
 
 def index(request):
@@ -47,7 +47,7 @@ def  delete(request):
 
         id = urllib.parse.unquote_plus(corpo[corpo.find("=")+1:], encoding="utf-8", errors="replace")
 
-        delete(int(id))
+        delete_note(int(id))
 
         return build_response(code=303, reason='See Other', headers='Location: /')
 
@@ -77,7 +77,7 @@ def edit(request):
             if chave_valor.startswith("content"):
                 params["content"] = urllib.parse.unquote_plus(chave_valor[chave_valor.find("=")+1:], encoding="utf-8", errors="replace")
     
-        update(id_int, params)
+        update_note(id_int, params)
 
         return build_response(code=303, reason='See Other', headers='Location: /')
     

@@ -1,6 +1,6 @@
 import socket
 from pathlib import Path
-from utils import extract_route, read_file, build_response, delete, add_notes, update
+from utils import extract_route, read_file, build_response, delete_note, add_notes, update_note
 from views import index, delete, edit
 
 CUR_DIR = Path(__file__).parent

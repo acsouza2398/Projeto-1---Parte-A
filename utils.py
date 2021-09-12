@@ -53,11 +53,11 @@ def add_notes(note):
     print("note", note)
     add = db.add(Note(title = note['title'], content = note['content']))
 
-def delete(id):
+def delete_note(id):
     db = Database('bank')
     delete = db.delete(id)
 
-def update(id, correct):
+def update_note(id, correct):
     db = Database('bank')
     update = db.update(Note(id = id, title = correct['title'], content = correct['content']))
 
